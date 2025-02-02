@@ -1,0 +1,23 @@
+{
+  "name": "examples",
+  "version": "0.0.1",
+  "author": "Hállex Costa <hallex.costa@hotmail.com>",
+  "private": true,
+  "packageManager": "pnpm@9.7.0",
+  "dependencies": {
+    "@loadable/component": "^5.16.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rspack build --config rspack/rspackProdConfig.js",
+    "dev": "rspack serve --config rspack/rspackDevConfig.js"
+  },
+  "workspaces": {
+    "packages": ["examples/*", "packages/*"]
+  }
+}

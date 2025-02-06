@@ -1,10 +1,10 @@
 {
-  "name": "@examples/problem",
-  "version": "0.0.0",
+  "name": "@examples/solution-2-break-into-smaller-parts",
+  "version": "1.0.0",
   "private": true,
   "main": "index.tsx",
   "scripts": {
-    "dev": "PORT=3030 rspack serve"
+    "dev": "PORT=3032 rspack serve"
   },
   "dependencies": {
     "@examples/problem": "*",

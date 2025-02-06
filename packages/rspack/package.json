@@ -1,9 +1,8 @@
 {
-  "name": "@example/rspack",
-  "version": "0.0.0",
+  "name": "@examples/rspack",
+  "version": "1.0.0",
   "private": true,
   "main": "index.js",
-  "exports": "index.js",
   "devDependencies": {
     "@rspack/cli": "1.1.4",
     "@rspack/core": "1.1.4",

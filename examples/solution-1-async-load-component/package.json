@@ -1,10 +1,10 @@
 {
-  "name": "@examples/problem",
-  "version": "0.0.0",
+  "name": "@examples/solution-1-async-load-component",
+  "version": "1.0.0",
   "private": true,
   "main": "index.tsx",
   "scripts": {
-    "dev": "PORT=3030 rspack serve"
+    "dev": "PORT=3031 rspack serve"
   },
   "dependencies": {
     "@examples/problem": "*",

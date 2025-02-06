@@ -11,7 +11,6 @@ const App = () => {
     <ErrorBoundary fallback={<p>An occurred error</p>}>
       <TeamMembersOverview />
     </ErrorBoundary>
-    // <span>Hállex Costa</span>
   );
 };
 

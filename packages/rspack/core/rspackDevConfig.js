@@ -1,14 +1,14 @@
-const rspack = require('@rspack/core');
-const path = require('path');
-const { merge } = require('webpack-merge');
-const ReactRefreshPlugin = require('@rspack/plugin-react-refresh');
+const rspack = require('@rspack/core')
+const path = require('node:path')
+const { merge } = require('webpack-merge')
+const ReactRefreshPlugin = require('@rspack/plugin-react-refresh')
 
-const rspackCommonConfig = require('./rspackCommonConfig');
-const { getWebpackWatchOptions} = require('./getWebpackWatchOptions')
+const rspackCommonConfig = require('./rspackCommonConfig')
+const { getWebpackWatchOptions } = require('./getWebpackWatchOptions')
 
-const PORT = parseInt(process.env.PORT || '4459', 10);
+const PORT = Number.parseInt(process.env.PORT || '4459', 10)
 
-const cwd = process.cwd();
+const cwd = process.cwd()
 
 /**
  * @type {import('@rspack/cli').Configuration}
@@ -16,24 +16,24 @@ const cwd = process.cwd();
 module.exports = merge(rspackCommonConfig, {
   plugins: [
     new rspack.HtmlRspackPlugin({
-      template: path.join(cwd, './src/index.html'),
-      publicPath: '/',
+      template: path.join(cwd, './index.html'),
+      publicPath: '/'
     }),
-    new ReactRefreshPlugin(),
+    new ReactRefreshPlugin()
   ],
   devServer: {
     port: PORT,
     open: '/#/app',
     allowedHosts: 'all',
     historyApiFallback: {
-      disableDotRule: true,
+      disableDotRule: true
     },
     devMiddleware: {
-      writeToDisk: true,
+      writeToDisk: true
     },
     hot: true,
     compress: true,
-    liveReload: false,
+    liveReload: false
   },
-  watchOptions: getWebpackWatchOptions(),
-});
+  watchOptions: getWebpackWatchOptions()
+})
